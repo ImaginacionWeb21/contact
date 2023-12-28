@@ -1,0 +1,33 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{%static 'prueba/css/bootstrap.css'%}" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> -->
+    <!--link rel="stylesheet" type='text/css' href="{%static 'prueba/form.css' %}"-->
+    <title>Document</title>
+</head>
+<body>
+    <h1>Contactame</h1>
+    <form method="POST">
+    {%csrf_token%}
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label" id="custom-label"  >Nombre</label>
+        <input class="form-control form-control-lg" id="exampleFormControlInput1" name="nombre" placeholder="nombre" required>
+      </div>
+      <div class="mb-3">
+          <label for="exampleFormControlInput2" class="form-label" id="custom-label">Email</label>
+          <input type="email" class="form-control form-control-lg" id="exampleFormControlInput2" name="correo" placeholder="name@example.com" required>
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label" id="custom-label">Mensaje</label>
+          <textarea class="form-control form-control-lg" id="exampleFormControlTextarea1" name="mensaje" rows="3"></textarea>
+        <div class="mb-3">
+        <button type="submit" class="btn btn-primary">Enviar</button>
+        </div>
+    </form>
+
+<script src="{%static 'prueba/js/bootstrap.bundle.min.js'}" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
